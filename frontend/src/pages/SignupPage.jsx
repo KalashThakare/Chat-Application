@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { useAuthStore } from '../store/useAuth.store';
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare, MessagesSquareIcon, User } from 'lucide-react';
 import {Link} from "react-router-dom"
+import toast from 'react-hot-toast';
 
 const SignupPage = () => {
   const [showPassword,setShowPassword] = useState(false);
   const [formData,setFormData] = useState({
-    fullName:"",
+    fullname:"",
     email:"",
     password:""
   });
@@ -14,11 +15,33 @@ const SignupPage = () => {
   const {signup,isSigningUp} = useAuthStore();
 
   const validateForm = () =>{
+    if(!formData.fullname.trim()){
+      return toast.error("Full name is required");
+    }
+    if(!formData.email.trim()){
+      return toast.error("email is required");
+    }
+    if(!formData.password){
+      return toast.error("Password is required");
+    }
+    if(!formData.password.length > 6){
+      return toast.error("Password should be atleast 6 characters long");
+    }
+    if(!/\S+@\S+\.\S+/.test(formData.email)){
+      return toast.error("Invalid email format");
+    }
 
+    return true;
   }
 
   const handleSubmit = (e) =>{
-    e.preventdefault();
+    e.preventDefault();
+
+    const success = validateForm();
+
+    if(success==true){
+      signup(formData);
+    }
   }
 
 
@@ -55,8 +78,8 @@ const SignupPage = () => {
                   <input type="text" 
                     placeholder='Enter name'
                     className='input input-bordered w-full pl-10'
-                    value={formData.fullName}
-                    onChange={(e)=> setFormData({...formData, fullName : e.target.value})}
+                    value={formData.fullname}
+                    onChange={(e)=> setFormData({...formData, fullname : e.target.value})}
                   />
                 </div>
               </div>
