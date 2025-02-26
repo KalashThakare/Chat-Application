@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useAuthStore } from '../store/useAuth.store';
+import { useAuthStore } from '../store/useAuth.store.js';
 import { Eye, EyeOff, Loader2, Lock, Mail, MessagesSquareIcon, User } from 'lucide-react';
 import {Link} from "react-router-dom"
 import toast from 'react-hot-toast';
@@ -110,7 +110,7 @@ const SignupPage = () => {
                     <Lock className='size-5 text-base-content/40 '/>
                   </div>
                   <input type={showPassword ? "text" : "password"} 
-                    placeholder='Enter your password'
+                    placeholder='••••••••'
                     className='input input-bordered w-full pl-10'
                     value={formData.password}
                     onChange={(e)=> setFormData({...formData, password : e.target.value})}
