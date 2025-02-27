@@ -1,8 +1,8 @@
 import React from 'react'
 import { useChatStore } from '../store/useChat.store.js';
 import Sidebar from '../components/Sidebar.jsx';
-import NoChatSelected from '../components/NoChatSelected.jsx';
-import ChatSelected from '../components/ChatSelected.jsx';
+import NoChatSelected from '../components/NoChatSelected';
+import ChatSelected from '../components/ChatSelected';
 
 
 const HomePage = () => {

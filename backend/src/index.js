@@ -21,7 +21,7 @@ const Port = process.env.PORT;
 
 
 app.use("/auth",authRoutes)
-app.use("/message",messageRoute);
+app.use("/messages",messageRoute);
 
 app.listen(Port,()=>{
     console.log(`Server is running on Port-${Port}`);
