@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
-import { useChatStore } from '../store/useChat.store.js'
+import { useChatStore } from '../store/useChatStore.js'
 import SidebarSkeleton from './skeleton/SidebarSkeleton';
 import { Users } from 'lucide-react';
-import { useAuthStore } from '../store/useAuth.store.js';
+import { useAuthStore } from '../store/useAuthStore.js';
 
 
 const Sidebar = () => {
 
-    const {getUsers, users, selectedUsers, setSelectedUsers, isUsersLoading } = useChatStore();
+    const {getUsers, users, selectedUser, setSelectedUser, isUsersLoading } = useChatStore();
 
     const {onLineUsers} = useAuthStore();
 
@@ -30,8 +30,8 @@ const Sidebar = () => {
       <div className='overflow-y-auto w-full py-3'>
         {users.map((user)=>(
           <button key={user._id}
-            onClick={()=>setSelectedUsers(user)}
-            className={`w-full p-3 flex items-center gap-3 hover:bg-base-300 transition-colors ${selectedUsers?._id === user._id ? "bg-base-300 ring-1 ring-base-300" : ""}`}
+            onClick={()=>setSelectedUser(user)}
+            className={`w-full p-3 flex items-center gap-3 hover:bg-base-300 transition-colors ${selectedUser?._id === user._id ? "bg-base-300 ring-1 ring-base-300" : ""}`}
           >
 
             <div className='relative mx-auto lg:mx-0'>

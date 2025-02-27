@@ -1,5 +1,5 @@
 import React from 'react'
-import { useChatStore } from '../store/useChat.store.js';
+import { useChatStore } from '../store/useChatStore.js';
 import Sidebar from '../components/Sidebar.jsx';
 import NoChatSelected from '../components/NoChatSelected';
 import ChatSelected from '../components/ChatSelected';
@@ -15,6 +15,7 @@ const HomePage = () => {
         <div className='bg-base-100 rounded-lg shadow-cl w-full max-w-6xl h-[calc(100vh-8rem)]'>
           <div className='h-full rounded-lg overflow-hidden'>
             <Sidebar />
+            
             {!selectedUser ? <NoChatSelected /> : <ChatSelected />}
           </div>
         </div>

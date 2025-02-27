@@ -1,3 +1,4 @@
+import React from "react";
 import { MessagesSquareIcon } from "lucide-react";
 
 const NoChatSelected = () => {
