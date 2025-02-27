@@ -12,7 +12,14 @@ const ChatSelected = () => {
     getMessages(selectedUser._id);
   },[selectedUser._id,getMessages]);
 
-  if(isMessagesLoading) return <MessagesLoading />;
+  if(isMessagesLoading) return (
+    <div className='flex flex-1 flex-col overflow-auto'>
+      <ChatHeader />
+      <MessagesLoading />
+      <MessageInput />
+    </div>
+    
+  );
 
 
   return (
