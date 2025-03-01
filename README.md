@@ -38,7 +38,18 @@ Deployment:
 
 🎯 Features
 
-✅ Real-time messaging with Socket.io✅ Media uploads (images & videos via Cloudinary)✅ State management with Zustand✅ Secure API with Express & MongoDB✅ Responsive UI with Tailwind CSS✅ Deployed on Render for live access
+✅ Real-time messaging with Socket.io
+
+✅ Media uploads (images & videos via Cloudinary)
+
+✅ State management with Zustand
+
+✅ Secure API with Express & MongoDB
+
+✅ Responsive UI with Tailwind CSS
+
+✅ Deployed on Render for live access
+
 
 🖥️ Installation & Setup
 
@@ -67,10 +78,15 @@ npm run dev  # Runs on port 5173 by default
 Create a .env file in the backend/ directory and add:
 
 MONGO_URI=your-mongodb-uri
+
 CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
+
 CLOUDINARY_API_KEY=your-cloudinary-api-key
+
 CLOUDINARY_API_SECRET=your-cloudinary-api-secret
+
 JWT_SECRET=your-jwt-secret
+
 
 🚀 Deployment
 
