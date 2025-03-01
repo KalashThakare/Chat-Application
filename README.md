@@ -4,7 +4,7 @@ ChatSync - Real-Time Chat Application
 
 🚀 Live Demo
 
-🔗 ChatSync Live App
+🔗 https://chatsync-pqe6.onrender.com/
 
 📌 Overview
 
