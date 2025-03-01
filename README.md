@@ -49,13 +49,17 @@ https://github.com/KalashThakare/Chat-Application.git
 2️⃣ Setup Backend
 
 cd backend
+
 npm install
+
 npm start  # Runs on port 4000 by default
 
 3️⃣ Setup Frontend
 
 cd frontend
+
 npm install
+
 npm run dev  # Runs on port 5173 by default
 
 4️⃣ Environment Variables
