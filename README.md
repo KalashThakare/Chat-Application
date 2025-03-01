@@ -6,9 +6,13 @@ ChatSync - Real-Time Chat Application
 
 🔗 https://chatsync-pqe6.onrender.com/
 
+
+
 📌 Overview
 
 ChatSync is a real-time chat application built with modern web technologies, allowing users to send text, images, and videos instantly. It features real-time messaging, media uploads, and a seamless UI for an engaging chat experience.
+
+
 
 🛠 Tech Stack
 
@@ -32,9 +36,13 @@ Backend:
 
 ☁ Cloudinary (for image & video storage)
 
+
+
 Deployment:
 
 🚀 Render (for hosting backend & frontend)
+
+
 
 🎯 Features
 
@@ -49,6 +57,8 @@ Deployment:
 ✅ Responsive UI with Tailwind CSS
 
 ✅ Deployed on Render for live access
+
+
 
 
 🖥️ Installation & Setup
@@ -88,6 +98,7 @@ CLOUDINARY_API_SECRET=your-cloudinary-api-secret
 JWT_SECRET=your-jwt-secret
 
 
+
 🚀 Deployment
 
 Deploying on Render
@@ -97,6 +108,9 @@ Push your code to a GitHub repository
 Connect Render with your repo
 
 Deploy backend & frontend separately on Render
+
+
+
 
  
 
